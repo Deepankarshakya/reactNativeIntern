@@ -1,0 +1,69 @@
+<script>
+    //Revising The nessary task to move forward
+    //Task 9
+    const users = ["Ram", "Shyam", "Hari"];
+    let remove = users.shift();
+    remove = users.unshift("Deepankar");
+    console.log(users);
+
+
+    // Task 11
+    const usersactive = [
+        {name:"Ram", age:22, active:true},
+        {name:"Shyam", age:17, active:true},
+        {name:"Hari", age:25, active:false}
+    ];
+    function active(){
+
+        let usersall = usersactive.filter(n => n.active === true && n.age >= 18).map(m => m.name);
+        return usersall;
+    }
+    console.log(active());
+
+
+    //Task 12
+    const cart = [
+        {item:"Phone", price:200},
+        {item:"Laptop", price:1000},
+        {item:"Tablet", price:500}
+    ];
+    function totalamt(){
+        let total = 0;
+        for(let i = 0; i < cart.length; i++){
+            if (cart[i].price >= 500){
+                total = total + cart[i].price;
+                }
+        }
+        return total;
+    }
+    console.log(totalamt());
+
+
+    //Task 13
+    const products = [
+        {name:"Phone", price:1000},
+        {name:"Laptop", price:2000}
+    ];
+    function format(){
+        let array = products.map(n => n.name + " Cost " + n.price);
+        return array;
+    }
+    console.log(format());
+
+
+    // Task 14
+    const nums = [1,2,3,4,5,6,7,8];
+    let even = nums.filter(n => n%2===0).length;
+    console.log(even);
+
+
+    //Task 15
+    const usersDash = [
+        {name:"Ram", active:true},
+        {name:"Shyam", active:false},
+        {name:"Hari", active:true}
+    ];
+    // let name = "Total user = " + usersDash.length + " Active User = " + usersDash[i].active===true + " InActive User = " + usersDash[i].active===false;
+    let name = "Total User = " + usersDash.length + " Active user = " + usersDash.filter(n => n.active).length + " inactive user = " + usersDash.filter(n => !n.active).length;
+    console.log(name);
+</script>

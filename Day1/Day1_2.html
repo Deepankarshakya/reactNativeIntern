@@ -1,0 +1,245 @@
+<script>
+  // Task 1
+  function smartClaculator(a, b, operator) {
+    if (operator === "+") {
+      return a + b;
+    } else {
+      if (operator === "-") {
+        return a - b;
+      } else {
+        if (operator === "*") {
+          return a * b;
+        } else {
+          if (operator === "/") {
+            return a / b;
+          } else {
+            if (
+              operator != "+" &&
+              operator != "-" &&
+              operator != "*" &&
+              operator != "/"
+            ) {
+              return "Invalid operator";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  console.log(smartClaculator(1, 5, "+"));
+  console.log(smartClaculator(1, 5, "-"));
+  console.log(smartClaculator(1, 5, "%"));
+
+  // Task 2
+  function checkPassword(password) {
+    if (password.length >= 8) {
+      return "Strong";
+    } else {
+      if (password.length < 8 && password.length > 5) {
+        return "Medium";
+      } else {
+        if (password.length < 5) {
+          return "Weak";
+        }
+      }
+    }
+  }
+  console.log(checkPassword("Deepnkar"));
+  console.log(checkPassword("Deepan"));
+  console.log(checkPassword("Dee"));
+
+  // Task 3
+  let dbUser = "admin";
+  let dbPass = 12345;
+  let dbUser1 = "adminn";
+  let dbPass1 = 12345;
+  let dbUser2 = "admin";
+  let dbPass2 = 123455;
+
+  function login(user, pass) {
+    if (user === "admin" && pass === 12345) {
+      return "Login Sucessfully";
+    } else {
+      if (user != "admin" && pass === 12345) {
+        return "User not Found";
+      } else {
+        if (user === "admin" && pass != 12345) {
+          return "Wrong Password";
+        }
+      }
+    }
+  }
+
+  console.log(login(dbUser, dbPass));
+  console.log(login(dbUser1, dbPass1));
+  console.log(login(dbUser2, dbPass2));
+
+  // Task 4
+  function analyzerNumber(num) {
+    if (num % 2 === 0 && num > 0) {
+      return "Even, Positive";
+    } else {
+      if (num % 2 != 0 && num > 0) {
+        return "Odd, Positive";
+      } else {
+        if (num % 2 != 0 && num < 0) {
+          return "Odd, Negative";
+        } else {
+          if (num % 2 === 0 && num < 0) {
+            return "Even, Negative";
+          } else {
+            if (num === 0) {
+              return "Zero";
+            }
+          }
+        }
+      }
+    }
+  }
+  console.log(analyzerNumber(4));
+  console.log(analyzerNumber(5));
+  console.log(analyzerNumber(-3));
+  console.log(analyzerNumber(-2));
+  console.log(analyzerNumber(0));
+
+  //Task 5
+  function inspectStrings(str) {
+    console.log(str.length);
+    console.log(str[str.length - str.length]);
+    console.log(str[str.length - 1]);
+
+    if (str.length > 10) {
+      return "Long String";
+    } else {
+      return "Short String";
+    }
+  }
+  console.log(inspectStrings("Deepankar"));
+
+  // Task 6
+  function profile(name, age, city, proffession) {
+    let sentence =
+      name +
+      " " +
+      "is " +
+      age +
+      " years old, lives in " +
+      city +
+      " and works as " +
+      proffession;
+    return sentence;
+  }
+  console.log(profile("Deepankar", 22, "Kathmandu", "Developer"));
+
+  //Task 7
+  function getGrade(marks) {
+    if (marks >= 90) {
+      return "A";
+    } else {
+      if (marks <= 89 && marks >= 80) {
+        return "B";
+      } else {
+        if (marks <= 79 && marks >= 70) {
+          return "C";
+        } else {
+          if (marks <= 69 && marks >= 50) {
+            return "D";
+          } else {
+            if (marks <= 50) {
+              return "Fail";
+            }
+          }
+        }
+      }
+    }
+  }
+  console.log(getGrade(90));
+  console.log(getGrade(85));
+  console.log(getGrade(75));
+  console.log(getGrade(65));
+  console.log(getGrade(55));
+  console.log(getGrade(45));
+
+  //Task 8
+  function timeOfDay(hour) {
+    if (hour >= 5 && hour <= 11) {
+      return "Morning";
+    } else {
+      if (hour >= 12 && hour <= 16) {
+        return "Afternoon";
+      } else {
+        if (hour >= 17 && hour <= 20) {
+          return "Evening";
+        } else {
+          if ((hour >= 21 && hour <= 24) || (hour > 0 && hour <= 4)) {
+            return "Night";
+          } else {
+            if (hour > 24) {
+              return "Format is wrong";
+            }
+          }
+        }
+      }
+    }
+  }
+  console.log(timeOfDay(6));
+  console.log(timeOfDay(15));
+  console.log(timeOfDay(19));
+  console.log(timeOfDay(23));
+  console.log(timeOfDay(28));
+
+  //Task 9
+  function bill(totalAmount, tax) {
+    const taxamount = (totalAmount * tax) / 100;
+    let finalbill = totalAmount + taxamount;
+
+    if (totalAmount <= 1000) {
+      return finalbill.toFixed(2);
+    } else {
+      if (totalAmount >= 1000) {
+        finalbill = finalbill * 0.9;
+        return finalbill.toFixed(2);
+      }
+    }
+  }
+  console.log(bill(1000, 13));
+
+  //Task 10
+  function validateUser(name, age) {
+    if (name === "") {
+      return "Name Required";
+    } else {
+      if (age < 18) {
+        return "Underage";
+      } else {
+        if (age > 18) {
+          return "Valid User";
+        }
+      }
+    }
+    return name;
+  }
+  console.log(validateUser("Deepankar",19));
+
+  //Task 11
+  function greet(name, time){
+    let names = name;
+
+    if(time === "morning"){
+      return "Good Morning" + name;
+    }
+    else{
+      if(time === "afternoon"){
+        return "Good Afternoon"+  name;
+      }
+      else{
+        if(time === "evening"){
+          return "Good Evening"+name;
+        }
+      }
+    }
+    return (name && time);
+  }
+  console.log((greet("Deepankar", "morning")));
+</script>

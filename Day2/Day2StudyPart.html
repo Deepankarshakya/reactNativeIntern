@@ -1,0 +1,223 @@
+<script>
+    // Store Multiple Values with Arrays
+     var ourArray = ["John", 23];
+
+     var myArray = ["Quincy", 1];
+
+
+    //  Nested Array
+    var nestedArray = [["the universe", 42], ["everything", 101010]];
+
+    var nestedArray2 = [["Deep", 99], ["lava",99]];
+
+
+    // Acess Array Data with Indexes
+    var AcessArray = [20,30,40];
+    var myData = AcessArray[1];
+    console.log(myData);
+
+
+    // Modify Array Data with Indexes
+    var arrayModify = [10,20,30];
+    arrayModify[1] = 22;
+
+    console.log(arrayModify);
+
+
+    // Acess Multi-Dimensional Arrays with Indexs
+    var multiDimensional = [[1,2,3],[4,5,6],[7,8,9], [[10,11,12],13,14]];
+
+    var myData = multiDimensional[3][1];
+    console.log(myData);
+
+
+    //Manuplate Arrays with push()
+    var manuplatepush = ["hi","hello","bye"];
+    manuplatepush.push("happy", "sad");
+
+    console.log(manuplatepush);
+
+    var manuplatepush2 = [["deep", 99],["hira", 88],["saha",33]];
+    manuplatepush2.push(["Deepankar", 99]);
+    console.log(manuplatepush2);
+
+
+    // Manipulate Arrays with pop()
+    var manuplatepop = [["Deep",22], ["Hello",66]];
+    manuplatepop.pop();
+
+    console.log(manuplatepop);
+
+    // Manuplate Arrays with shift()
+    var manuplateShift = [["Deeep",12], ["Help",22]];
+    manuplateShift.shift();
+    console.log(manuplateShift);
+
+
+    // Manuplate Arrays with unshift()
+    var manuplateUnshift = [1,2,3];
+    manuplateUnshift.unshift(3);
+
+    var manuplateUnshift2 = [["hello", 22], ["hi", 33]];
+    manuplateUnshift2.unshift([["Deep", 99]]);
+
+    console.log(manuplateUnshift);
+    console.log(manuplateUnshift2);
+
+
+    // Shoping List
+    var shopingList = [["banana",12], ["apple",6], ["mango",3]];
+
+
+    // Write Reusable Code with Function
+    function reusable(number){
+        console.log("Hello");
+        a = number;
+        b = a + 3;
+        console.log(b);
+    }
+    reusable(3);
+    reusable(5);
+
+
+    // Global Scope and Function
+    var globalValue = 33;
+
+    function fun1(){
+        var insideValueOfFunction = 55; //This is not global value
+    }
+
+    function fun2(){
+        var output = "";
+        if(typeof globalValue != "undefined"){
+            output += "myGlobal" + globalValue + "\n";
+        }
+        if(typeof insideValueOfFunction != "undefined"){
+            output += "insideValueOfFunction" + insideValueOfFunction;
+        }
+        console.log(output);
+    }
+
+    fun1();
+    fun2();
+
+    var globalVaiue1 = 88;
+
+    function fun3(){
+        valueInsideFun = 33; //This is global Value
+    }
+
+    function fun4(){
+        if(typeof globalVaiue1 != "undefined"){
+            console.log("Global Value " + globalVaiue1);
+        }
+        if(typeof valueInsideFun != "undefined"){
+            console.log("Global Value " + valueInsideFun);
+        }
+    }
+
+    fun3();
+    fun4();
+
+
+    // Local Scope and Function
+    function mylocalScope(){
+        var myVar = 5;
+        console.log(myVar);
+    }
+    mylocalScope();
+    //console.log(myVar); // This will not work because it is declared inside the function
+
+
+
+    // Global vs Local Scope in Fuctions
+    var outerWear = "T-Shirt";
+    function cloths(){
+        var outerWear = "jacket";
+        return outerWear;
+    }
+    console.log(cloths());
+    console.log(outerWear);
+
+
+    //Return a Value from a Function with Return
+    function minusthree(number){
+        return number - 3;
+    }
+    console.log(minusthree(10));
+
+    function divide(number){
+        return number / 3;
+    }
+    console.log(divide(30));
+
+
+    // UnderStanding Undefined Value Returned from a function
+    var sumadd = 33;
+    function add0(){
+        return sumadd = sumadd + 5;
+    }
+    function add1(){
+        sumadd +=10; //without return fumction will not return anything
+    }
+    console.log(add0());
+    console.log(add1());
+
+
+    //Assignment with returned Value
+    var changed = 0;
+    function change(num){
+        return (num + 5) / 3;
+    }
+
+    changed = change(10);
+    console.log(changed);
+
+
+    //Arry Basic from chat task
+    const users = ["Ram", "Sham", "Deeep"];
+    console.log(users[0]);
+    console.log(users[2]);
+
+
+    //Loop through Array
+    for(let i = 0; i<users.length; i++){
+        console.log(users[i]);
+    }
+
+
+    // map() Array
+    const numbers = [1,2,3];
+    const double = numbers.map(n => n*2);
+    console.log(double);
+
+    const usersmap = ["ram", "sham", "hari"];
+    const counting = usersmap.map(m => 22 + m);
+    console.log(counting);
+
+
+    // filter() Array
+    const numbersforfilter = [1,2,3,4,5,6,7,8,9,10];
+    const evennumber = numbersforfilter.filter(n => n%2===0);
+    console.log(evennumber);
+
+
+    // Find() Array
+    const usersfind = [
+        {name:"apple", age:22},
+        {name:"mango", age:25},
+        {name:"gold", age:28},
+        {name:"rasberry", age:80},
+        {name:"pine", age:77},
+        {name:"egg", age:66},
+        {name:"app", age:44},
+        {name:"max", age:33}
+    ];
+    const userfind = usersfind.find(n => n.age===22);
+    console.log(userfind);
+
+
+    //Differencce Between find and filter
+    
+
+</script>

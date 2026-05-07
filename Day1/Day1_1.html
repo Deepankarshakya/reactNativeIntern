@@ -1,0 +1,89 @@
+<script>
+    // Task 1
+    function calculator(a,b,operator){
+        let c = a + operator + b;
+        return c;
+    }
+    console.log(calculator(10,5,"+"));
+    console.log(calculator(10,5,"-"));
+
+
+    // Task 2
+    let firstName = "deepankar"
+    let lastName = "shakya";
+
+    firstName = "Deepankar";
+    lastName = "Shakya";
+
+    let complete = firstName + " " + lastName;
+
+    console.log(complete);
+
+    
+    // Task 3
+    function checker(a){
+        if ((a%2)===0){
+            console.log("even");
+        }
+        else{
+            console.log("odd");
+        }
+    }
+    console.log(checker(5));
+
+
+    // Task 4
+    let text = "JavaScript";
+    console.log(text.length);
+    console.log(text[text.length - 10]);
+    console.log(text[text.length - 1]);
+
+    // Task 5
+    let userName = "admin";
+    let password = "1234";
+
+    function login(user, pass){
+        if(user===userName && pass === password){
+            console.log("Login Successfully");
+        }else{
+            console.log("Acess Denied");
+        }
+    }
+    console.log(login("admin","1234"));
+
+
+    // Task 6 Sentence Builder
+    function buildSentence(name, age, city){
+        let sentence = "";
+        sentence = "My name is "+ name + ". " + "I am " + age +" " + "years old. " + "I live in " + city;
+        return sentence;
+    }
+    console.log(buildSentence("Ram", "22", "KTM"));
+
+
+    // Task 9
+    let marks = 75;
+    function Grade(a){
+        if (a>=90){
+            console.log("A");
+        }
+        else{
+            if(a<=89 && a>=75){
+                console.log("B");
+            }
+            else{
+                if(a<=74 && a>=50){
+                    console.log("C");
+                }
+                else{
+                    if(a>50){
+                        console.log("Fail");
+                    }
+                }
+            }
+        }
+        
+    }
+    console.log(Grade(marks));
+
+</script>

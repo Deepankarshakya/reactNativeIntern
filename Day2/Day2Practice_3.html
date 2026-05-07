@@ -1,0 +1,98 @@
+<script>
+  const users = [
+    {
+      id: 1,
+      name: "Ram",
+      age: 22,
+      active: true,
+      salary: 50000,
+    },
+    {
+      id: 2,
+      name: "Shyam",
+      age: 17,
+      active: false,
+      salary: 30000,
+    },
+    {
+      id: 3,
+      name: "Hari",
+      age: 25,
+      active: true,
+      salary: 70000,
+    },
+    {
+      id: 4,
+      name: "Sita",
+      age: 19,
+      active: false,
+      salary: 40000,
+    },
+  ];
+  //Task 1
+  function totaluser() {
+    let totalusers = users.length;
+    return totalusers;
+  }
+  console.log(totaluser());
+
+  //Tasks :
+  function activeuser() {
+    // let active = users.filter(n => n.active); // Task 2 ans
+    // Task 3 ans = let active = users.filter(n => n.active).map(m => m.name);
+    // Task 4 ans = let active = users.filter(n => n.id===3).map(m => m.name);
+    // Task 5: let active = users.filter(n => n.age < 18).map(m => m.name);
+    // Task 6: let active = users.map(n => (n.salary*.10) + n.salary);
+    // Task 7 :
+    // let active = 0;
+    // for( let i = 0; i<users.length; i++){
+    //   active = active + users[i].salary;
+    // }
+    // return active;
+    // Task 8:
+    // let active = 0;
+    // for (let i = 0; i < users.length; i++) {
+    //   if (users[i].active === true) {
+    //     active = active + users[i].salary;
+    //   }
+    //   return active;
+    // }
+  }
+
+  // Task 9
+  // let salary = 0;
+  // for(let i = 0; i < users.length; i++){
+  //   salary = salary + users[i].salary;
+  // }
+  // function summary(){
+  //   let summarys = "totalUsers = " + users.length + ",\n" + "Active Users = " + users.filter(n => n.active).length + ",\n" + "Inactive Users = " + users.filter(n => !n.active).length +",\n" + "salary = " + salary;
+  //   return summarys;
+  // }
+  // console.log(summary());
+
+  // Task 10
+  // function formatuser(){
+  //   for(let i = 0; i<users.length; i++){
+  //     let total = users[i].name +  " is " + users[i].age + " years old., \n";
+  //     console.log( total);
+  //   }
+  // }
+  // formatuser();
+
+  //Task 11 bounus
+
+  function login(id) {
+    let user = users.find((n) => n.id === id);
+
+    if (!user) {
+      return "User not found";
+    }
+
+    if (user.active) {
+      return "Welcome " + user.name;
+    }
+
+    return "Account inactive";
+  }
+  console.log(login(3));
+</script>

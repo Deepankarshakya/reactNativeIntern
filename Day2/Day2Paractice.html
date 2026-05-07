@@ -1,0 +1,123 @@
+<script>
+    // Task 1
+    const numbers = [10,20,30];
+    const Addnum = numbers.push(40);
+    const removenum = numbers.pop();
+    const Addnumbeg = numbers.unshift(5);
+
+    console.log(numbers);
+
+
+    //Task 2
+    const numoddeven = [1,2,3,4,5,6];
+    function even(){ 
+        const evennum = numoddeven.filter(n => n%2===0);
+        return "even : " + evennum;
+    }
+    function odd(){
+         const oddnum =numoddeven.filter(n => n%2!=0);
+         return "odd : " + oddnum;
+    }
+    console.log(even());
+    console.log(odd());
+
+
+    // Task 3
+    const prices = [100, 200, 300];
+    function tax(){
+        let taxamount = prices.map(n => n+(n*.10));
+        return taxamount;
+    }
+    console.log(tax());
+
+
+    //Task 4
+    const marks = [35,80,90,45,60];
+    function passmarks(){
+        let fifty = marks.filter(n => n>=50);
+        return "Accepted marks : " + fifty;
+    }
+    console.log(passmarks());
+
+
+    // Task 5
+    const userstofind = [
+        {id:1, name:"ram"},
+        {id:2, name:"rami"},
+        {id:3, name:"ramananda"},
+        {id:4, name:"ramesor"},
+        {id:5, name:"ramba"}
+    ]
+    function findid3(){
+        let ids = userstofind.filter(n => n.id === 3);
+        return ids;
+    }
+    console.log(findid3());
+
+
+    // Task 6
+    const users = [
+        {name: "Ram", active:true},
+        {name: "Ramanda", active:true},
+        {name: "Rameshor", active:false},
+        {name: "Raman", active:true},
+        {name: "Rajan", active:false},
+        {name: "Rani", active:true},
+        {name: "Ramba", active:false},
+    ];
+    function activeusers(){
+        let active = users.filter(n => n.active===true);
+        return active;
+    }
+    console.log(activeusers());
+
+
+    // Task 7
+    const names = ["ram","sham","hari"];
+    function uppercase(){
+        let upper = names.map(n=> n.toUpperCase());
+        return upper;
+    }
+    console.log(uppercase());
+
+
+    // Task 8
+    const cart = [
+        {item:"Phone", prices:200},
+        {item:"Hat", prices:2000},
+        {item:"Photo", prices:2500},
+        {item:"Pen", prices:2600}
+    ];
+    function total(){
+        var totalamt = 0;
+        for(let i = 0; i<cart.length; i++){
+        
+        totalamt = totalamt + cart[i].prices;
+        }
+        return totalamt;
+    }
+    console.log(total());
+
+
+    // Task 9
+    const usersname = ["Ram", "Shyam", "Hari"];
+    function nameaddandremove(){
+        usersname.shift();
+        usersname.unshift("Deepankar");
+        return usersname;
+    }
+    console.log(nameaddandremove());
+
+
+    //Task 10
+    const userfind = [
+        {name:"Ram", age:22},
+        {name:"Shyam", age:17},
+        {name:"Hari", age:25}
+    ];
+    function under18(){
+        let under = userfind.find(n => n.age<18);
+        return under;
+    }
+    console.log(under18());
+</script>
